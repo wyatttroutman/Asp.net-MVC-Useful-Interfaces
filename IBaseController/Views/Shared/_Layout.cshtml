@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>@ViewBag.Title - Project</title>
+
+    @Styles.Render("~/bundles/style-package")
+    @RenderSection("styles", required: false)
+    <link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Content/favicon.ico")" />
+
+</head>
+<body id="body">
+    @{ Html.RenderPartial("~/Views/Shared/_InfoModal.cshtml"); }
+    @{ Html.RenderPartial("~/Views/Shared/_ErrorModal.cshtml"); }
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <div id="loader" class="loader">
+    </div>
+
+    @Scripts.Render("~/bundles/script-package")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
