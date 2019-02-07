@@ -35,7 +35,7 @@ The following function definition allow you to send an email through your servic
 internal bool SendEmail(string[] toAddresses, string fromAddress, string[] ccAddresses, string subject, string body, IEnumerable<HttpPostedFileBase> attachments)
 ```
 
-This function operators under the precondition that all array parameters are non-empty arrays. You must configure the `server` and `port` options in this function to match your implementation. Anonymous sending must be enabled on the mail server. I recommened whitelisting your web server's IP address for anonymous sending on the mail server and not enabling it globally.
+This function operators under the precondition that all array parameters are non-empty arrays. You must configure the `server` and `port` options in this function to match your implementation. Anonymous sending must be enabled on the mail server. I recommend whitelisting your web server's IP address for anonymous sending on the mail server and not enabling it globally.
 
 
 ## Liability
