@@ -15,7 +15,7 @@ This interface currently provides these different benefits:
 The following function definition in the `IBaseController.cs` interface class will add extended error handling: 
 
 ```c#
-protected override void OnException(ExceptionContext filterContext)`
+protected override void OnException(ExceptionContext filterContext)
 ```
 
 The implementation will override the default `OnException` function from `Controller` and allow you to redirect the user to another controller. In my implementation, I have a controller named `ErrorHandler` that will parse the information and respond based on the error type. 
